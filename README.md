@@ -1,3 +1,4 @@
+```docker
 FROM     ubuntu:20.04
 
 RUN echo "deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse" >  /etc/apt/sources.list
@@ -9,8 +10,10 @@ RUN echo "deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted 
 
 RUN  apt-get  -q update
 
+```
 
 ----
+```docker
 
 FROM u2004
 
@@ -26,8 +29,10 @@ ENV JRE_HOME $JAVA_HOME/jre
 ENV CLASSPATH $JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib:$CLASSPATH
 ENV PATH $JAVA_HOME/bin:$PATH
 
-
+```
 ----
+
+```docker
 
 FROM    uja
 
@@ -56,3 +61,5 @@ WORKDIR /opencv/build
 RUN cmake -DBUILD_TESTS=OFF -DBUILD_SHARED_LIBS=OFF -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.5.5/modules  -DBUILD_opencv_hdf=OFF  ../opencv-4.5.5
 
 RUN cmake --build .
+
+```
